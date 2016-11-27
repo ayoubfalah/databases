@@ -238,7 +238,7 @@ The signal word
 
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 The symbol 
@@ -251,6 +251,61 @@ The symbol
 \end_inset
 
 
+\end_layout
+
+\begin_layout Enumerate
+List the 
+\begin_inset Formula $Order\#$
+\end_inset
+
+ for orders that were shipped from all warehouses the company has in New
+ York:
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The signal words 
+\begin_inset Formula $“from\;all”$
+\end_inset
+
+ and 
+\begin_inset Formula $“on\;all”$
+\end_inset
+
+ are indications for using the 
+\begin_inset Formula $Divide$
+\end_inset
+
+ operator
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R_{1}\leftarrow\sigma_{City='New\;York'}\left(WAREHOUSE\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $R_{2}\leftarrow SHIPMENT\div R_{1}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $RESULT\leftarrow\pi_{Order\#}\left(R_{2}\right)$
+\end_inset
+
+ 
 \end_layout
 
 \end_body
